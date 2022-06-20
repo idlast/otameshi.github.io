@@ -1,5 +1,7 @@
 @startuml
 
-hey -> jpo
+component ƒtƒƒ“ƒg as front
+
+front -> [SpotifyAPI]
 
 @enduml
