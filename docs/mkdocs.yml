@@ -1,64 +1,29 @@
-# Project information
-site_name: otameshi.github.io
-#site_url:
-
-# Repository
-repo_name: otameshi.github.io
-repo_url: https://github.com/idlast/otameshi.github.io
-
-# Configuration
+site_name: otameshi
 theme:
-  name: 'material'
+  name: material
+  language: ja
+  features:
+    - tabs
   palette:
-    primary: 'Teal'
-    accent: 'Deep Orange'
-  language: 'ja'
-  feature:
-    tabs: true
-
-extra_css:
-    - "//fonts.googleapis.com/earlyaccess/notosansjp.css"
-    - "//fonts.googleapis.com/css?family=Open+Sans:600,800"
-    # - 'stylesheets/extra.css'
-    - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
-
-extra:
-  social:
-    - type: 'github'
-      link: 'https://https://bps-github.pstg.paas.cloud.global.fujitsu.com/squidfunk'
-
+    primary: indigo
+    accent: indigo
 markdown_extensions:
-    - markdown.extensions.admonition
-    - markdown.extensions.codehilite:
-        guess_lang: false
-    - markdown.extensions.def_list
-    - markdown.extensions.footnotes
-    - markdown.extensions.meta
-    - markdown.extensions.toc:
-        permalink: true
-    - pymdownx.arithmatex
-    - pymdownx.betterem:
-        smart_enable: all
-    - pymdownx.caret
-    - pymdownx.critic
-    - pymdownx.details
-    - pymdownx.emoji:
-        emoji_generator: !!python/name:pymdownx.emoji.to_svg
-    - pymdownx.inlinehilite
-    - pymdownx.keys
-    - pymdownx.magiclink
-    - pymdownx.mark
-    - pymdownx.smartsymbols
-    - pymdownx.superfences
-    - pymdownx.tasklist:
-        custom_checkbox: true
-    - pymdownx.tilde
-
-
-extra_javascript:
-  - 'javascripts/extra.js'
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML
-
-google_analytics:
-  - 'UA-126129623-1'
-  - 'auto'
+  - codehilite
+  - footnotes
+  - meta
+  - admonition
+  - plantuml_markdown:
+      server: http://www.planturl.com/planturl
+extra:
+  search:
+    language: 'ja'
+plugins:
+  - git-revision-date-localized
+nav:
+  - Home:
+    - Top: index.md
+    - Hint:
+      - plantUML: about/hint-plantuml.md
+    - Build configuration: about/document-build.md
+  - Guides:
+    - architecture: design/architecture.md
